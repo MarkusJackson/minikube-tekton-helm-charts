@@ -41,8 +41,8 @@ spec:
         pipeline.tekton.dev/release: v0.69.1
         version: v0.69.1
     spec:
-      affinity:
         {{- with .Values.controller.affinity }}
+      affinity:
           {{- toYaml . |  nindent 8 }}
           {{- end }}
       containers:
@@ -113,7 +113,9 @@ spec:
             periodSeconds: 10
             timeoutSeconds: 5
           resources:
-            {{- toYaml  .Values.controller.resources |  nindent 10 }}
+  {{- with .Values.controller.resources }}
+  {{- toYaml . | nindent 10 }}
+  {{- end }}
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
