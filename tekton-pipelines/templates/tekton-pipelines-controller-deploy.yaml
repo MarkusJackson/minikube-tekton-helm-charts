@@ -41,7 +41,7 @@ spec:
         pipeline.tekton.dev/release: v0.69.1
         version: v0.69.1
     spec:
-      affinity:
+      affinity: v0.69.1
         {{- with .Values.controller.affinity }}
           {{- toYaml . |  nindent 8 }}
         {{- end }}
