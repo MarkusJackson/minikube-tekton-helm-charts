@@ -65,9 +65,9 @@ dashboard:
     enabled: true
     hosts:
         - host: tekton-dashboard.local
-        paths:
+          paths:
             - path: /
-            pathType: Prefix
+              pathType: Prefix
     annotations: {}
     tls: []
 
