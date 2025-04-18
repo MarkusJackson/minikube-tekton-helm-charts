@@ -9,7 +9,7 @@ resources:
 - templates/git-resolver-config-cm.yaml
 - templates/tekton-pipelines-remote-resolvers-deploy.yaml
 
-patchesStrategicMerge:
+patches:
 - patches/tekton-pipelines-controller-deploy.yaml
 - patches/tekton-pipelines-webhook-deploy.yaml
 - patches/config-defaults-cm.yaml
