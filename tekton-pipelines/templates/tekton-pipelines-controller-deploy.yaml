@@ -126,10 +126,6 @@ spec:
               name: config-registry-cert
           image: {{ .Values.controller.deployment.image }}
       serviceAccountName: tekton-pipelines-controller
-      tolerations:
-        {{- with .Values.controller.tolerations }}
-          {{- toYaml . |  nindent 6 }}
-          {{- end}}
       volumes:
         - configMap:
             name: config-logging
