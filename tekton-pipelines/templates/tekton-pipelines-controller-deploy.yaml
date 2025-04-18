@@ -43,8 +43,8 @@ spec:
     spec:
       affinity:
         {{- with .Values.controller.affinity }}
-          {{- toYaml . |  nindent 8 }}
-          {{- end }}
+        {{- toYaml . |  nindent 8 }}
+        {{- end }}
       containers:
         - args:
             - -entrypoint-image
