@@ -108,8 +108,6 @@ spec:
             initialDelaySeconds: 5
             periodSeconds: 10
             timeoutSeconds: 5
-          resources:
-            {{- toYaml  .Values.controller.resources |  nindent 10 }}
           securityContext:
             allowPrivilegeEscalation: false
             capabilities:
